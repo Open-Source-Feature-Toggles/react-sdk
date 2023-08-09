@@ -28,10 +28,12 @@ function FlagProvider ({
         const readyCallBack = () => {
             console.log('[CONNECTED] Feature-Toggle-Client')
             setFlagsReady(true)
+            setFlagsError(false)
         }
 
         const errorCallBack = () => {
             setFlagsError(true)
+            setFlagsReady(false)
             throw new Error('Error with Feature-Toggle-Client connection')
         }
 
@@ -48,6 +50,8 @@ function FlagProvider ({
 
     const context = useMemo(() => ({
         client : client.current, 
+        flagsReady : FlagsReady, 
+        flagsError : FlagsError, 
     }), [FlagsReady, FlagsError])
 
     return <FlagContext.Provider value={context}>{children}</FlagContext.Provider>
