@@ -3,11 +3,13 @@
 
 ## All repositories as part of this project
 
-[JS-SDK](https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Client-API)
-<br/>
-[Admin-Website](https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Admin-UI)
-<br/>
-[Node-Backend](https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Server)
+<a href="https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Client-API" target="_blank">JS-SDK</a>
+<br>
+<br>
+<a href="https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Admin-UI" target="_blank">Admin-Website</a>
+<br>
+<br>
+<a href="https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Server" target="_blank">Node-Backend</a>
 
 ## Installations
 
