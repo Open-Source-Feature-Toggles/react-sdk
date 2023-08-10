@@ -1,15 +1,11 @@
 # Feature-Toggles-React-SDK
 ### React SDK for [opensourcefeaturetoggles.com](https://opensourcefeaturetoggles.com)
 
-## All repositories as part of this project
+## Other Repositories that are a part of this project
 
-<a href="https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Client-API" target="_blank">JS-SDK</a>
-<br>
-<br>
-<a href="https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Admin-UI" target="_blank">Admin-Website</a>
-<br>
-<br>
-<a href="https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Server" target="_blank">Node-Backend</a>
+### [Javascript SDK](https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Client-API)
+### [Admin Website](https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Admin-UI)
+### [Node Backend](https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Server)
 
 ## Installations
 
@@ -22,7 +18,7 @@ yarn add feature-toggles-react-sdk
 ## How to Use 
 ### Initialize the Client
 
-First create a config and pass that config as props with name 'config' to FlagProvider somewhere in your component tree. The config should contain the API Key for your project's environment that you will be testing and a formatted string to tell the client how often it should check for updated flags.
+First create a config object with your project's apiKey and the frequency with which you want the client to check for flag updates. Then pass this config as props to FlagProvider somewhere in your component tree.  
 
 Since the client is able to update on regular intervals, any changes done by the project admin will be reflected in real time to the client. 
 
@@ -67,9 +63,9 @@ function App () {
 
 ### Get Features
 
-Similar to useFlag, you can check if a feature is enabled with the ```useFeature``` hook by passing it the name of the feature. If the feature doesn't exist, the flag defaults to false. 
+Similar to ```useFlag```, you can check if a feature is enabled with the ```useFeature``` hook by passing it the name of a feature. If the feature doesn't exist, the flag defaults to false. 
 
-Since features typically have multiple variables, this hook can be useful for enabling/disabling entire parts of your application that may hold many variables.
+Since features can contain multiple variables, this hook can be useful for enabling/disabling large parts of your application with ease without having to enable/disable many variables.
 
 ```jsx
 import { useFeature } from "feature-toggles-react-sdk"
@@ -90,14 +86,13 @@ function HomePage () {
 
 ### Defer flags until fetched 
 
-While the feature toggle client makes its initial request, you can defer loading your application until the flags have been loaded. It's important to note that all 
-flags that are called in your application default to false until they are updated by the client. 
+While the feature toggle client makes its initial request, you can defer loading your application until the flags have been loaded. It's important to note that all flags that are called in your application default to false until they are updated by the client. 
 
 ```jsx
 import { useFlagStatus } from 'feature-toggles-react-sdk';
 
 function MyApp {
-  const { flagsReady, flagsError } = useFlagsStatus()
+  const { flagsReady, flagsError } = useFlagStatus()
 
   if (!flagsReady) {
     return <Loading />;
