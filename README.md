@@ -7,7 +7,8 @@
 ### [Admin Website](https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Admin-UI)
 ### [Node Backend](https://github.com/DONTSTOPLOVINGMEBABY/Feature-Flagging-Server)
 
-## Installations
+## How to Use
+### Installations
 
 ```bash
 npm install feature-toggles-react-sdk
@@ -15,7 +16,6 @@ npm install feature-toggles-react-sdk
 yarn add feature-toggles-react-sdk 
 ```
 
-## How to Use 
 ### Initialize the Client
 
 First create a config object with your project's apiKey and the frequency with which you want the client to check for flag updates. Then pass this config as props to FlagProvider somewhere in your component tree.  
