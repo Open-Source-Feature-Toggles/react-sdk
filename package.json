@@ -1,6 +1,6 @@
 {
   "name": "feature-toggles-react-sdk",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A react sdk for the free feature toggle service located at https://opensourcefeaturetoggles.com",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
